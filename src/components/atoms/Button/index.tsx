@@ -25,6 +25,7 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
         props.size,
         props.theme
     );
+
     return <button
         className={classProps}
         onClick={props.onClick}

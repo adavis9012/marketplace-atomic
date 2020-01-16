@@ -1,0 +1,15 @@
+@import "../../settings/variables";
+
+.list-item {
+  list-style-type: none;
+  text-decoration: none;
+
+  &_icon {
+    margin-right: 0.3rem;
+  }
+
+  &_text {
+    color: $font-color;
+    font-family: $open-sans;
+  }
+}

@@ -1,7 +1,6 @@
 import React from 'react';
-import ListItem from "./";
-import * as icons from '@fortawesome/free-solid-svg-icons'
-import {text, select, withKnobs} from "@storybook/addon-knobs";
+import ListItem, {icons} from "./";
+import {select, text, withKnobs} from "@storybook/addon-knobs";
 
 export  default {
     component: ListItem,
@@ -10,5 +9,7 @@ export  default {
 }
 
 export const _default = () => {
-    return <ListItem icon={select('Icon', icons, icons.faDotCircle)}>List Item</ListItem>;
+    const iconKnob = select('Icon', icons, icons.faDotCircle);
+
+    return <ListItem icon={iconKnob}>{text('Children', 'List Item')}</ListItem>;
 };
